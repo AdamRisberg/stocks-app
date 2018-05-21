@@ -5,8 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Stocks App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Stocks App</h1>
+
+<div class="chart-container">
+  <div class="chart-header clear">
+    <div class="split">
+      <h1 class="chart-title">Stocks: Closing Rate History</h1>
+    </div>
+
+    <div class="chart-btns split">
+      <input class="time" id="m1" type="radio" value="1" name="time-options" checked="true"/>
+      <label for="m1">1 Month</label>
+      <input class="time" id="m3" type="radio" value="3" name="time-options" />
+      <label for="m3">3 Months</label>
+      <input class="time" id="m6" type="radio" value="6" name="time-options" />
+      <label for="m6">6 Months</label>
+      <input class="time" id="m9" type="radio" value="9" name="time-options" />
+      <label for="m9">9 Months</label>
+      <input class="time" id="y1" type="radio" value="12" name="time-options" />
+      <label for="y1">Year</label>
+    </div>
+  </div>
+
+  <div class="chart-area">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <div class="stocks-container">
+    <div class="stocks-search">
+      <label for="search-input">Syncs in realtime across clients:</label>
+      <input type="text" id="search-input" placeholder="stock symbol"/>
+      <button id="search-btn">ADD</button>
+      <p id="message" class="hide">Stock not found</p>
+    </div>
+  </div>
+</div>
+<script src="es6-promise.auto.min.js"></script>
+<script src="socket.io.js"></script>
+<script src="axios.min.js"></script>
+<script src="Chart.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

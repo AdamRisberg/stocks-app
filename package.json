@@ -1,5 +1,5 @@
 {
-  "name": "stocks",
+  "name": "stocks-app",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,8 +9,8 @@
   "author": "Adam Risberg",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^5.0.1",
+    "axios": "^0.18.0",
     "express": "^4.16.3",
-    "mongoose": "^5.0.17"
+    "socket.io": "^2.1.1"
   }
 }
